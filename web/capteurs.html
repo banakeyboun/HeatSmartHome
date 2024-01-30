@@ -19,7 +19,28 @@
         h6 {
             font-family: "Raleway", sans-serif
         }
+
+
+        table {
+            font-family: "Raleway", sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+            font-weight: normal;
+        }
+
+        th {
+            background-color: #e2c679;
+            font-weight: bold;
+        }
     </style>
+
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -42,9 +63,16 @@
             <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-bookmark w3-margin-right"></i>INTRODUCTION</a>
             <a href="#part1" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
-                    class="fa fa-bookmark w3-margin-right"></i>A</a>
+                    class="fa fa-bookmark w3-margin-right"></i>DHT11 / DHT22</a>
             <a href="#part2" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
-                    class="fa fa-bookmark w3-margin-right"></i>B</a>
+                    class="fa fa-bookmark w3-margin-right"></i>LM35DZ / TMP36</a>
+            <a href="#part3" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-bookmark w3-margin-right"></i>BMP180 / BME280</a>
+            <a href="#part4" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-bookmark w3-margin-right"></i>LM75</a>
+            <a href="#part5" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-bookmark w3-margin-right"></i>COMPARATIF
+            </a>
             <a href="#conclu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-bookmark w3-margin-right"></i>CONCLUSION</a>
         </div>
@@ -59,68 +87,116 @@
 
         <!-- Header -->
 
-        <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
-                class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
         <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
                 class="fa fa-bars"></i></span>
         <div class="w3-container">
             <h1><b>2. Le choix du capteur</b></h1>
         </div>
         </header>
-
+        <hr>
         <header id="intro">
             <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
                 <h4><b>Introduction</b></h4>
                 <p>
-
+                    Dans le cadre du projet HeatSmart Home, le choix des capteurs de température revêt une importance
+                    cruciale pour garantir une régulation thermique optimale et une utilisation énergétique efficiente.
+                    Ce texte explore les caractéristiques et les performances de divers capteurs, mettant en évidence
+                    leurs avantages et inconvénients respectifs. De la mesure de la température et de l'humidité aux
+                    capteurs barométriques avancés, cette comparaison offre un aperçu approfondi des options
+                    disponibles. L'objectif est de guider vers le choix optimal de capteurs pour maximiser l'efficacité
+                    énergétique du projet HeatSmart Home.
                 </p>
-                <hr>
+
         </header>
         <header id="part1">
             <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
-                <h4><b>A</b></h4>
+                <h4><b>DHT11 / DHT22</b></h4>
                 <p>
+                    <br>
+                    Le DHT11 et le DHT22 sont des capteurs numériques de température qui évaluent à la fois la
+                    température et l'humidité relative. Dotés d'une puce interne chargée de la conversion
+                    analogique-numérique, ces
+                    capteurs transmettent un signal numérique incluant les données de température et d'humidité.
+                    Leur conception simplifiée les rend particulièrement conviviaux pour une intégration aisée avec
+                    divers microcontrôleurs, dont l'Arduino. Le DHT22 se distingue par une précision accrue ainsi
+                    qu'une plage de mesure de température et d'humidité plus étendue. Il est par conséquent plus
+                    onéreux que le
+                    DHT11.
                 </p>
-
         </header>
+
         <header id="part2">
             <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
-                <h4><b>B</b></h4>
+                <h4><b>LM35DZ / TMP36</b></h4>
                 <p>
+                    Le LM35DZ et le TMP36 sont des capteurs des température linéaire préalablement calibrés en
+                    degrés Celsius. Sa
+                    sortie analogique est directement proportionnelle à la température en Celsius. Le LM35DZ
+                    supporte une plage d'alimentation beaucoup plus vaste (4 à 30 V) et offre une plus grande
+                    précision (+/- 0,5°C).
                 </p>
+        </header>
 
-                <!--Code-->
+        <header id="part3">
+            <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
+                <h4><b>BMP180 / BME280</b></h4>
+                <p>
+                    Malgré leur principale fonction de capteur de pression barométrique, le BMP180 et le BME280 ont
+                    également la
+                    capacité de mesurer la température. Cette fonctionnalité s'avère utile lors
+                    de l'intégration dans des projets de stations météorologiques. Le BME280 propose en supplément
+                    une mesure de l'humidité, une plage d'alimentation en 3,3V ou 5V ainsi qu'une plus grande
+                    précision. Il est par conséquent plus onéreux que le BMP180.<br><br>
+                </p>
+        </header>
 
-                <div class="w3-panel w3-card w3-hover-grey">
-                    <h4>HTML Example</h4>
-                    <div class="w3-code htmlHigh notranslate">
-                        &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
-                        &lt;title&gt;HTML Tutorial&lt;/title&gt;<br>
-                        &lt;body&gt;<br><br>
-                        &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
-                        &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
-                        &lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
-                </div>
+        <header id="part4">
+            <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
+                <h4><b>LM75</b></h4>
+                <p>
+                    Le capteur LM75 offre une communication via le bus I2C et une grande compacité. Il offre surtout
+                    une grande précision de mesure (+/- 0.125°C), pour un coût assez faible.
+                </p>
+        </header>
 
+        <header id="part5">
+            <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
+                <h4><b>Comparatif</b></h4>
+                <p>
+                    Nous arrivons donc au tableau comparatif suivant : <br><br>
 
+                    <img src="img/capteurs/capteurs.png" alt="HeatSmart Home" style="width:90%;">
+
+                </p>
         </header>
 
         <header id="conclu">
             <div class="w3-container w3-padding-large" style="margin-bottom:32px" align="justify">
                 <h4><b>Conclusion</b></h4>
-                <p>Conclu
+                <p>Dans le cadre du projet HeatSmart Home, la précision des capteurs s'avère être un critère essentiel
+                    pour garantir un contrôle thermique optimal. Afin d'éviter tout compromis, nous avons écarté les
+                    options d'entrée de gamme pour nous concentrer sur des capteurs offrant des performances plus
+                    avancées.
+                    <br> <br>
+                    La mesure de l'humidité a été identifiée comme un élément clé dans notre évaluation des besoins en
+                    chauffage du lieu. C'est pourquoi le choix d'un capteur intégrant cette fonctionnalité a été
+                    privilégié. Dans cette optique, le DHT22 s'est imposé comme un choix judicieux, offrant une
+                    précision accrue tout en facilitant la mise en œuvre rapide de prototypes.
+                    <br> <br>
+                    En parallèle, la considération de la pression barométrique comme un paramètre potentiellement
+                    influent sur notre projet a orienté notre choix vers le BME280. Cette option offre une gamme étendue
+                    de mesures, nous permettant de prendre des décisions éclairées sur la gestion thermique du HeatSmart
+                    Home à mesure que le projet évolue.
+                    <br> <br>
+                    Ainsi, le DHT22 et le BME280 se révèlent être des choix stratégiques, alignés sur nos besoins
+                    spécifiques et offrant une flexibilité précieuse pour l'avancement du projet HeatSmart Home.
                 </p>
                 <hr>
                 <!-- Progress bars / Skills -->
-                <p>Software</p>
+
+                <p><strong>Hardware</strong></p>
                 <div class="w3-grey">
-                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:5%">5%</div>
-                </div>
-                <p>Hardware</p>
-                <div class="w3-grey">
-                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:5%">5%</div>
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">100%</div>
                 </div>
                 <hr>
         </header>
